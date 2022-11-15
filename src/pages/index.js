@@ -3,8 +3,8 @@ import Layout from "../components/Layout"
 import Seo from "../components/SEO"
 import BannerModule from "../components/BannerModule/BannerModule"
 import BasicTextModule from "../components/BasicTextModule/BasicTextModule"
-import PerksModule from "../components/PerksModule/PerksModule"
-import Perk from "../components/PerksModule/Perk"
+import AffiliatesModule from "../components/AffiliatesModule/AffiliatesModule"
+import Affiliate from "../components/AffiliatesModule/Affiliate"
 import Services from "../components/Services/Services"
 import LatestPosts from "../components/Post/LatestPosts"
 
@@ -23,9 +23,9 @@ const Index = () => {
           link="/services"
           linkText="View Services"
         />
-        <PerksModule>
-          <Perk title="The Title" content="The content" />
-        </PerksModule>
+        <AffiliatesModule>
+          <Affiliate title="The Title" content="The content" />
+        </AffiliatesModule>
         <Services
           title="Featured Services From Northwest Technique."
           introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."

@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-export const PerksModuleStyles = styled.section`
+export const AffiliatesModuleStyles = styled.section`
   background-color: #000;
   position: relative;
 
-  .perks__image--bg,
-  .perks__image--overlay {
+  .affiliates__image--bg,
+  .affiliates__image--overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,18 +13,18 @@ export const PerksModuleStyles = styled.section`
     bottom: 0;
   }
 
-  .perks__image--bg {
+  .affiliates__image--bg {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-  .perks__image--overlay {
+  .affiliates__image--overlay {
     background-color: rgba(0, 0, 0, 0.65);
   }
 
-  .perks__divider {
+  .affiliates__divider {
     font-size: 25px;
     color: var(--primary);
 
@@ -56,7 +56,7 @@ export const PerksModuleStyles = styled.section`
   }
 `
 
-export const PerkStyles = styled.aside`
+export const AffiliateStyles = styled.aside`
   max-width: 275px;
   text-align: center;
 
