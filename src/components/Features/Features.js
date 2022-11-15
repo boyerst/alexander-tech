@@ -33,7 +33,3 @@ const Features = ({ title, introduction }) => {
 
 export default Features
 
-
-// Used as a main container for feed underneath each separate product page
-  // FeaturedProduct is used as template for each product & we pass the feature prop to the component
-// Imported into product-template.js to show feed of Featured products at the bottom of each single product page

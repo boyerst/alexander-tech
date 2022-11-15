@@ -92,10 +92,22 @@ export const PerkStyles = styled.aside`
       width: 200px;
     }
 
+    // @media (min-width: 1024px) {
+    //   width: 300px;
+    //   height: 60px;
+    // }
+
     @media (min-width: 1024px) {
-      width: 300px;
-      height: 60px;
+      width: 400px;
+      height: 225px;
     }
+
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: contain !important;
+    //   object-position: center;
+    // }
 
     img {
       width: 100%;
@@ -103,5 +115,6 @@ export const PerkStyles = styled.aside`
       object-fit: contain !important;
       object-position: center;
     }
+
   }
 `
