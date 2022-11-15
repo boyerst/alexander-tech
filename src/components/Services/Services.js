@@ -5,7 +5,7 @@ import FeaturedService from "./FeaturedService"
 import useFeaturedService from "../../hooks/use-featured-service"
 import Button from "../Button/Button"
 
-const Features = ({ title, introduction }) => {
+const Services = ({ title, introduction }) => {
   const featuredService = useFeaturedService()
 
   return (
@@ -31,4 +31,4 @@ const Features = ({ title, introduction }) => {
   )
 }
 
-export default Features
+export default Services
