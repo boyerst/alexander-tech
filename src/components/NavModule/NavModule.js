@@ -4,7 +4,7 @@ import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
 import { menuItems } from "./NavConstants"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
-import useFeaturedProduct from "../../hooks/use-featured-product"
+import useFeaturedService from "../../hooks/use-featured-service"
 import { FiChevronDown as Chevron } from "react-icons/fi"
 import {
   NavModuleStyles,
@@ -22,7 +22,7 @@ import {
 } from "./NavAnim"
 
 const NavModule = () => {
-  const featuredProduct = useFeaturedProduct()
+  const featuredService = useFeaturedService()
 
   const [isOpen, setNav] = useContext(MenuContext)
   const [subNavIsOpen, setSubNav] = useState(false)
@@ -94,7 +94,7 @@ const NavModule = () => {
               </Link>
             </li>
           ))}
-          {featuredProduct && (
+          {featuredService && (
             <li className={subNavIsOpen ? "open" : "closed"}>
               <button
                 type="button"
@@ -120,7 +120,7 @@ const NavModule = () => {
                   </Link>
                 </li>
                 <hr />
-                {featuredProduct.map((item, index) => {
+                {featuredService.map((item, index) => {
                   const { gatsbyPath, title } = item
                   return (
                     <li key={index}>

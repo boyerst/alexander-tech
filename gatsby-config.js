@@ -16,7 +16,7 @@ module.exports = {
     instagramUsername: "",
     linkedinUsername: "",
     image: "/macbook-color.jpg",
-    siteUrl: "",
+    siteUrl: "https://www.dropmail.me",
     developerName: "Leanings Inc",
     developerUrl: "",
   },

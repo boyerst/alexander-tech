@@ -1,6 +1,6 @@
 import React from "react"
 import Seo from "../components/SEO"
-// import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import BannerModule from "../components/BannerModule/BannerModule"
 // import Faq from "../components/Faq/Faq"
@@ -67,12 +67,12 @@ const ServiceTemplateStyles = styled.div`
 //   }
 // `
 
-const Servicetemplate = (contentfulProduct) => {
+const Servicetemplate = (contentfulService) => {
   const {
     title,
     introduction,
     description,
-  } = contentfulProduct
+  } = contentfulService
   // const productHeaderImage = getImage(headerImage)
   return (
     <>
@@ -84,7 +84,7 @@ const Servicetemplate = (contentfulProduct) => {
       >
         <GatsbyImage
           className="banner__image"
-          image={productHeaderImage}
+          image={serviceHeaderImage}
           alt={title}
         />
       </BannerModule>
@@ -128,4 +128,4 @@ const Servicetemplate = (contentfulProduct) => {
   )
 }
 
-export default Producttemplate
+export default Servicetemplate

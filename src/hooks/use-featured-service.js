@@ -1,17 +1,17 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const useFeaturedProduct = () => {
+const useFeaturedService = () => {
   const {
-    allContentfulProduct: { nodes },
+    allContentfulService: { nodes },
   } = useStaticQuery(graphql`
-    query featuredProductLinksQuery {
-      allContentfulProduct(
-        filter: { featureThisProduct: { eq: true } }
+    query featuredServiceLinksQuery {
+      allContentfulService(
+        filter: { featureThisService: { eq: true } }
         sort: { fields: url }
       ) {
         nodes {
           title
-          gatsbyPath(filePath: "/products/{contentfulProduct.url}")
+          gatsbyPath(filePath: "/services/{contentfulService.url}")
           featureThisService
           introduction
           headerImage {
@@ -29,4 +29,4 @@ const useFeaturedProduct = () => {
   return nodes
 }
 
-export default useFeaturedProduct
+export default useFeaturedService

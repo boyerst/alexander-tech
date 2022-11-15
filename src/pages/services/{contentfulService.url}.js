@@ -26,13 +26,12 @@ export const data = graphql`
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
-
       description {
         raw
       }
-      
     }
   }
+}
 `
 
 export default Service
