@@ -71,6 +71,6 @@ yarn-error.log
 .yarn-integrity
 
 # Contentful config
-.contentful-config.json
+contentful-config.json
 
 

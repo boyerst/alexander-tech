@@ -2,14 +2,14 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Button from "../Button/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { FeaturedProductStyles } from "./FeaturesStyles"
+import { FeaturedServiceStyles } from "./FeaturesStyles"
 
 const FeaturedProduct = ({ feature }) => {
   const { gatsbyPath, headerImage, title, introduction } = feature
   const image = getImage(headerImage)
 
   return (
-    <FeaturedProductStyles>
+    <FeaturedServiceStyles>
       <Link to={gatsbyPath}>
         <GatsbyImage
           className="features__item--img"
@@ -24,13 +24,8 @@ const FeaturedProduct = ({ feature }) => {
           </div>
         )}
       </Link>
-    </FeaturedProductStyles>
+    </FeaturedServiceStyles>
   )
 }
 
-export default FeaturedProduct
-
-
-// Imported into Features.js
-    // Used as container for each featured product within the main Features.js container
-// Imported into ProductFeed.js
+export default FeaturedService
