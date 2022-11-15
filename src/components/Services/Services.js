@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { FeaturedServicesStyles } from "./FeaturesStyles"
-import FeaturedService from "./FeaturedProduct"
-import useFeaturedProduct from "../../hooks/use-featured-product"
+import { FeaturedServicesStyles } from "./ServicesStyles"
+import FeaturedService from "./FeaturedService"
+import useFeaturedService from "../../hooks/use-featured-service"
 import Button from "../Button/Button"
 
 const Features = ({ title, introduction }) => {
-  const featuredService = useFeaturedProduct()
+  const featuredService = useFeaturedService()
 
   return (
     <FeaturedServicesStyles className="section">

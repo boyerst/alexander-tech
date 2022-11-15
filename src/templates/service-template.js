@@ -71,9 +71,10 @@ const Servicetemplate = (contentfulService) => {
   const {
     title,
     introduction,
+    headerImage,
     description,
   } = contentfulService
-  // const productHeaderImage = getImage(headerImage)
+  const serviceHeaderImage = getImage(headerImage)
   return (
     <>
       <Seo title={title} />

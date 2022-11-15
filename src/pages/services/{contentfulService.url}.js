@@ -1,15 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ServiceTemplate from "../../templates/product-template"
+import ServiceTemplate from "../../templates/service-template"
 import Seo from "../../components/SEO"
 import Layout from "../../components/Layout"
 
-const Service = ({ data: { contentfulProduct } }) => {
+const Service = ({ data: { contentfulService } }) => {
   return (
     <>
-      <Seo title={contentfulProduct.title} />
+      <Seo title={contentfulService.title} />
       <Layout>
-        <ServiceTemplate {...contentfulProduct} />
+        <ServiceTemplate {...contentfulService} />
       </Layout>
     </>
   )
@@ -17,7 +17,7 @@ const Service = ({ data: { contentfulProduct } }) => {
 
 export const data = graphql`
   query productQuery($id: String) {
-    contentfulProduct(id: { eq: $id }) {
+    contentfulService(id: { eq: $id }) {
       title
       introduction
       headerImage {
@@ -26,9 +26,7 @@ export const data = graphql`
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
-      description {
-        raw
-      }
+      description
     }
   }
 }

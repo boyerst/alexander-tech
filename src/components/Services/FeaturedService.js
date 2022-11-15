@@ -2,9 +2,9 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Button from "../Button/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { FeaturedServiceStyles } from "./FeaturesStyles"
+import { FeaturedServiceStyles } from "./ServicesStyles"
 
-const FeaturedProduct = ({ feature }) => {
+const FeaturedService = ({ feature }) => {
   const { gatsbyPath, headerImage, title, introduction } = feature
   const image = getImage(headerImage)
 
