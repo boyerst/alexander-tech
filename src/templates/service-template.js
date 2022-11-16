@@ -96,7 +96,7 @@ const Servicetemplate = (contentfulService) => {
               <RichText richText={description} />
             </div>
           )}
-          {/*{faqs && (
+{/*          {faqs && (
             <div className="column">
               {faqs.map((item, index) => {
                 return (

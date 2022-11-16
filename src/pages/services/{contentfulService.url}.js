@@ -16,8 +16,11 @@ const Service = ({ data: { contentfulService } }) => {
 }
 
 export const data = graphql`
-  query productQuery($id: String) {
+  query serviceQuery($id: String) {
     contentfulService(id: { eq: $id }) {
+      description {
+        raw
+      }
       title
       introduction
       headerImage {
@@ -26,10 +29,9 @@ export const data = graphql`
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
-      description
+      }
     }
   }
-}
 `
 
 export default Service

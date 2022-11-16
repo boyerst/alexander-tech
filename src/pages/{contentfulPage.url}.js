@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import DefaultTemplate from "../templates/default-template"
 import FeedTemplate from "../templates/feed-template"
+import AboutTemplate from "../templates/about-template"
 
 const getTemplate = (contentfulPage) => {
   const { template } = contentfulPage
@@ -9,6 +10,8 @@ const getTemplate = (contentfulPage) => {
   switch (template) {
     case "feed":
       return <FeedTemplate {...contentfulPage} />
+    case "about":
+      return <AboutTemplate {...contentfulPage} />
 
     default:
       return <DefaultTemplate {...contentfulPage} />
