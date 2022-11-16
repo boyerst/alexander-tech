@@ -22,22 +22,38 @@ export const data = graphql`
       introduction
       content {
         raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            gatsbyImageData(
-              width: 800
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
-            description
-            __typename
-          }
-        }
+
       }
       createdAt(formatString: "DD MMMM, YYYY")
     }
   }
 `
+
+// Original query throwing error "Cannot query field "references" on type"
+
+// export const data = graphql`
+//   query postQuery($id: String) {
+//     contentfulPost(id: { eq: $id }) {
+//       title
+//       introduction
+//       content {
+//         raw
+//         references {
+//           ... on ContentfulAsset {
+//             contentful_id
+//             gatsbyImageData(
+//               width: 800
+//               placeholder: BLURRED
+//               formats: [AUTO, WEBP, AVIF]
+//             )
+//             description
+//             __typename
+//           }
+//         }
+//       }
+//       createdAt(formatString: "DD MMMM, YYYY")
+//     }
+//   }
+// `
 
 export default Post
