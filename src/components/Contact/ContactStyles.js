@@ -1,10 +1,15 @@
 import styled from "styled-components"
 
 export const ContactStyles = styled.section`
-  max-width: 750px;
+  // max-width: 750px;
   box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
+  display: flex;
+  // align-items: center;
+  justify-content: space-around;
+
+
 
   input {
     height: calc(var(--gap) * 2);

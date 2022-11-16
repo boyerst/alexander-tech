@@ -15,7 +15,7 @@ const Index = () => {
       <Layout>
         <BannerModule
           title="Northwest Technique"
-          subTitle="Quis vel eros donec ac odio tempor orci dapibus. Nisi lacus sed viverra tellus in hac."
+          subTitle="AmSAT Certified Alexander Techique teacher in Oregon, US."
         />
         <BasicTextModule
           title="Aut culpa adipisci in sequi libero ex galisum nihil 33 laboriosam voluptas."
