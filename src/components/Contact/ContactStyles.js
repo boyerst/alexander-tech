@@ -10,7 +10,16 @@ export const ContactStyles = styled.section`
   justify-content: space-around;
   // height: 200vh;
 
-
+  div p {
+    margin-bottom: 0;
+  }
+  > div > span {
+    font-weight: bold;
+  }
+  > div > span > svg {
+    color: var(--primary);
+    margin-right: 9px;
+  }
 
 
   input {

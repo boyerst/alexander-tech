@@ -2,6 +2,8 @@ import * as React from "react"
 import Button from "../Button/Button"
 import { ContactStyles } from "./ContactStyles"
 import MapModule from "../MapModule/MapModule"
+import { BsFillTelephoneFill as Phone } from "react-icons/Bs"
+
 
 
 
@@ -9,9 +11,16 @@ const Contact = () => {
   return (
     <div>
       <ContactStyles className="section">
-        <div>
+        <div className="call">
           <h2>Call.</h2>
-          <p>(123) 456-6957</p>
+          
+          <span>
+            <Phone />
+            (123) 456-6957
+          </span>
+          <p>Monday - Friday </p>
+          <p>8:00 am - 5:00 pm PST</p>
+        
         </div>
         <form name="contact" netlify>
           <h2>Write.</h2>
