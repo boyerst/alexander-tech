@@ -24,6 +24,19 @@ export const AffiliatesModuleStyles = styled.section`
     background-color: rgba(0, 0, 0, 0.65);
   }
 
+  .affiliates_link {
+    text-decoration: none;
+    color: #fff;  
+    transition: color 0.3s ease;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: var(--primary);
+    }
+  }
+
+
   .affiliates__divider {
     font-size: 25px;
     color: var(--primary);
@@ -32,6 +45,7 @@ export const AffiliatesModuleStyles = styled.section`
       font-size: 35px;
     }
   }
+
 
   > .container {
     position: relative;
@@ -80,6 +94,7 @@ export const AffiliateStyles = styled.aside`
   p {
     margin-bottom: 0;
   }
+
   .gatsby-image-wrapper {
     width: 170px;
     height: 45px;
