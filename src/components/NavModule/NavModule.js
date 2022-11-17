@@ -104,7 +104,6 @@ const NavModule = () => {
                 Lessons<span>.</span>
                 <Chevron />
               </button>
-
               <SubNavStyles
                 initial="closed"
                 animate={subNavIsOpen ? "open" : "closed"}

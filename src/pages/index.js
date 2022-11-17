@@ -5,7 +5,7 @@ import BannerModule from "../components/BannerModule/BannerModule"
 import BasicTextModule from "../components/BasicTextModule/BasicTextModule"
 import AffiliatesModule from "../components/AffiliatesModule/AffiliatesModule"
 import Affiliate from "../components/AffiliatesModule/Affiliate"
-import Services from "../components/Services/Services"
+import Lessons from "../components/Lessons/Lessons"
 import LatestPosts from "../components/Post/LatestPosts"
 
 const Index = () => {
@@ -20,14 +20,14 @@ const Index = () => {
         <BasicTextModule
           title="<We or name of practice> offer a variety of lesssons necessitatibus fugit id dolores."
           content="Lorem ipsum dolor sit amet. Aut nobis quasi est necessitatibus fugit id dolores itaque quo reiciendis unde hic esse laborum ea quis perferendis ea tempore error."
-          link="/services"
-          linkText="View Services"
+          link="/Lessons"
+          linkText="View Lessons"
         />
         <AffiliatesModule>
           <Affiliate title="The Title" content="The content" />
         </AffiliatesModule>
-        <Services
-          title="Featured Services From Northwest Technique."
+        <Lessons
+          title="Featured Lessons From Northwest Technique."
           introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
         />
         <LatestPosts

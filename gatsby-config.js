@@ -9,12 +9,12 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Northwest Technique",
-    description: "A super-fast site using GatsbyJS",
+    description: "Alexander Technique lessons",
     author: "SB",
-    twitterUsername: "",
-    facebookUsername: "",
-    instagramUsername: "",
-    linkedinUsername: "",
+    twitterUsername: "name",
+    facebookUsername: "name",
+    instagramUsername: "name",
+    linkedinUsername: "name",
     image: "/macbook-color.jpg",
     siteUrl: "https://www.dropmail.me",
     developerName: "Leanings Inc",
@@ -35,8 +35,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://barcadia.netlify.com",
-        sitemap: "https://barcadia.netlify.com/sitemap.xml",
+        host: "https://hostName.netlify.com",
+        sitemap: "https://hostName.netlify.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

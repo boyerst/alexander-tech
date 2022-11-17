@@ -5,9 +5,13 @@ import { StaticImage } from "gatsby-plugin-image"
 import Button from "../Button/Button"
 
 const BannerModule = ({ children, title, subTitle, price, enquire }) => {
+
   function scrollToArea() {
     navigate("#topContent")
+    console.log("Button Clicked")
   }
+
+
 
   return (
     <>
@@ -25,7 +29,6 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
             placeholder="blurred"
           />
         )}
-
         <div className="container">
           <div className="banner__content">
             {title && (
@@ -41,10 +44,11 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
                 <span style={{ color: "var(--primary)" }}>.</span>
               </h2>
             )}
+
             <div className="banner__btns">
               {enquire && (
                 <Button
-                  className="btn"
+                  // className="btn"
                   text="Enquire Now"
                   as={Link}
                   to="/contact"
