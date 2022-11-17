@@ -101,7 +101,7 @@ const NavModule = () => {
                 onClick={toggleSubNav}
                 onKeyDown={toggleSubNav}
               >
-                About<span>.</span>
+                Lessons<span>.</span>
                 <Chevron />
               </button>
 
@@ -110,16 +110,6 @@ const NavModule = () => {
                 animate={subNavIsOpen ? "open" : "closed"}
                 variants={subMenuNavVariants}
               >
-                <li>
-                  <Link
-                    onClick={toggleNav}
-                    onKeyDown={toggleNav}
-                    to="/lessons"
-                  >
-                    See All<span>.</span>
-                  </Link>
-                </li>
-                <hr />
                 {featuredLessons.map((item, index) => {
                   const { gatsbyPath, title } = item
                   return (
@@ -135,6 +125,17 @@ const NavModule = () => {
                     </li>
                   )
                 })}
+                <hr />
+                <li>
+                  <Link
+                    onClick={toggleNav}
+                    onKeyDown={toggleNav}
+                    to="/lessons"
+                  >
+                    See All<span>.</span>
+                  </Link>
+                </li>
+
               </SubNavStyles>
             </li>
           )}

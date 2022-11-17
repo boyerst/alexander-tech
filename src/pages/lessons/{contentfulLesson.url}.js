@@ -16,7 +16,7 @@ const Lesson = ({ data: { contentfulLesson } }) => {
 }
 
 export const data = graphql`
-  query serviceQuery($id: String) {
+  query lessonQuery($id: String) {
     contentfulLesson(id: { eq: $id }) {
       description {
         raw

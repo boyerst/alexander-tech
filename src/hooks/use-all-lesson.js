@@ -8,7 +8,7 @@ const useAllLesson = () => {
       allContentfulLesson(sort: { fields: createdAt, order: DESC }) {
         nodes {
           title
-          gatsbyPath(filePath: "/services/{contentfulLesson.url}")
+          gatsbyPath(filePath: "/lessons/{contentfulLesson.url}")
           introduction
           description {
             raw
