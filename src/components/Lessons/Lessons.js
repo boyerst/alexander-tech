@@ -1,15 +1,15 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { FeaturedServicesStyles } from "./ServicesStyles"
-import FeaturedService from "./FeaturedService"
-import useFeaturedService from "../../hooks/use-featured-service"
+import { FeaturedLessonsStyles } from "./LessonsStyles"
+import FeaturedLesson from "./FeaturedLesson"
+import useFeaturedLesson from "../../hooks/use-featured-lesson"
 import Button from "../Button/Button"
 
-const Services = ({ title, introduction }) => {
-  const featuredService = useFeaturedService()
+const Lessons = ({ title, introduction }) => {
+  const featuredLesson = useFeaturedLesson()
 
   return (
-    <FeaturedServicesStyles className="section">
+    <FeaturedLessonsStyles className="section">
       {title || introduction ? (
         <div className="container container__tight">
           <div className="intro__area">
@@ -20,15 +20,15 @@ const Services = ({ title, introduction }) => {
       ) : null}
 
       <div className="container container__tight container__scroll">
-        {featuredService.map((node, index) => {
-          return <FeaturedService feature={node} key={index} />
+        {featuredLesson.map((node, index) => {
+          return <FeaturedLesson feature={node} key={index} />
         })}
       </div>
       <div className="container container__tight learn__more">
-        <Button as={Link} to="/services" text="All Services" />
+        <Button as={Link} to="/lessons" text="See All" />
       </div>
-    </FeaturedServicesStyles>
+    </FeaturedLessonsStyles>
   )
 }
 
-export default Services
+export default Lessons

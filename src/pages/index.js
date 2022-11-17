@@ -18,7 +18,7 @@ const Index = () => {
           subTitle="AmSAT Certified Alexander Techique teacher in Oregon, US."
         />
         <BasicTextModule
-          title="Aut culpa adipisci in sequi libero ex galisum nihil 33 laboriosam voluptas."
+          title="<We or name of practice> offer a variety of lesssons necessitatibus fugit id dolores."
           content="Lorem ipsum dolor sit amet. Aut nobis quasi est necessitatibus fugit id dolores itaque quo reiciendis unde hic esse laborum ea quis perferendis ea tempore error."
           link="/services"
           linkText="View Services"

@@ -4,7 +4,7 @@ import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
 import { menuItems } from "./NavConstants"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
-import useFeaturedService from "../../hooks/use-featured-service"
+import useFeaturedLesson from "../../hooks/use-featured-lesson"
 import { FiChevronDown as Chevron } from "react-icons/fi"
 import {
   NavModuleStyles,
@@ -22,7 +22,7 @@ import {
 } from "./NavAnim"
 
 const NavModule = () => {
-  const featuredService = useFeaturedService()
+  const featuredLessons = useFeaturedLesson()
 
   const [isOpen, setNav] = useContext(MenuContext)
   const [subNavIsOpen, setSubNav] = useState(false)
@@ -94,14 +94,14 @@ const NavModule = () => {
               </Link>
             </li>
           ))}
-          {featuredService && (
+          {featuredLessons && (
             <li className={subNavIsOpen ? "open" : "closed"}>
               <button
                 type="button"
                 onClick={toggleSubNav}
                 onKeyDown={toggleSubNav}
               >
-                Services<span>.</span>
+                About<span>.</span>
                 <Chevron />
               </button>
 
@@ -114,13 +114,13 @@ const NavModule = () => {
                   <Link
                     onClick={toggleNav}
                     onKeyDown={toggleNav}
-                    to="/services"
+                    to="/lessons"
                   >
-                    All Services<span>.</span>
+                    See All<span>.</span>
                   </Link>
                 </li>
                 <hr />
-                {featuredService.map((item, index) => {
+                {featuredLessons.map((item, index) => {
                   const { gatsbyPath, title } = item
                   return (
                     <li key={index}>
