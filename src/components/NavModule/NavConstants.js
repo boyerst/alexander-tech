@@ -4,7 +4,7 @@ export const menuItems = [
     text: "home",
   },
   {
-    path: "/about",
+    path: "/about-alexander-technique",
     text: "about",
   },
   {
@@ -15,4 +15,17 @@ export const menuItems = [
     path: "/contact",
     text: "contact",
   },
+]
+
+
+export const menuItemsAbout = [
+  {
+    path: "/about-alexander-technique",
+    text: "Alexander Technique",
+  },           
+  {
+    path: "about-northwest-technique",
+    text: "Northwest Technique"
+  }                  
+
 ]

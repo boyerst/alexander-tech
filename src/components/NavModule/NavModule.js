@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import { Link } from "gatsby"
 import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
-import { menuItems } from "./NavConstants"
+import { menuItems, menuItemsAbout } from "./NavConstants"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 import useFeaturedLesson from "../../hooks/use-featured-lesson"
 import { FiChevronDown as Chevron } from "react-icons/fi"
@@ -18,7 +18,7 @@ import {
   barTwoVariants,
   barThreeVariants,
   menuList,
-  subMenuNavVariants,
+  subMenuNavVariants
 } from "./NavAnim"
 
 const NavModule = () => {
@@ -26,6 +26,7 @@ const NavModule = () => {
 
   const [isOpen, setNav] = useContext(MenuContext)
   const [subNavIsOpen, setSubNav] = useState(false)
+  const [subNavOneIsOpen, setSubNavOne] = useState(false)
 
   const toggleNav = () => {
     setNav((isOpen) => !isOpen)
@@ -33,6 +34,10 @@ const NavModule = () => {
 
   const toggleSubNav = () => {
     setSubNav((subNavIsOpen) => !subNavIsOpen)
+  }
+
+  const toggleSubNavOne = () => {
+    setSubNavOne((subNavOneIsOpen) => !subNavOneIsOpen)
   }
 
   const { title } = UseSiteMetadata()
@@ -94,6 +99,36 @@ const NavModule = () => {
               </Link>
             </li>
           ))}
+            <li className={subNavOneIsOpen ? "open" : "closed"}>
+              <button
+                type="button"
+                onClick={toggleSubNavOne}
+                onKeyDown={toggleSubNavOne}
+              >
+                About<span>.</span>
+                <Chevron />
+              </button>
+              <SubNavStyles
+                initial="closed"
+                animate={subNavOneIsOpen ? "open" : "closed"}
+                variants={subMenuNavVariants}
+              >
+                {menuItemsAbout.map((item, index) => {   
+                  return (
+                    <li key={index}>
+                      <Link
+                        onClick={toggleNav}
+                        onKeyDown={toggleNav}
+                        to={item.path}
+                      >
+                        {item.text}
+                        <span>.</span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </SubNavStyles>
+            </li>
           {featuredLessons && (
             <li className={subNavIsOpen ? "open" : "closed"}>
               <button
