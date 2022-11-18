@@ -47,10 +47,37 @@ export const menuList = {
 //   },
 // }
 
+
 export const subMenuNavVariants = {
-  open: () => ({ display: open }),
-  closed: () => ({ display: closed })
+  open: () => ({ 
+    visibility: "visible",
+    height: "auto", 
+    opacity: 1, 
+    transition: {
+      height: {
+        duration: .5,
+      },
+      opacity: {
+        duration: 1,
+        delay: .2
+      }
+    }
+  }),
+  closed: () => ({ 
+    visibility: "hidden", 
+    height: 0, 
+    opacity: 0,  
+    transition: {
+      // delay: 2,
+      height: {
+        duration: .8,
+      }
+    }
+  })
 }
 
-const open = "block";
-const closed = "none";
+
+
+
+
+

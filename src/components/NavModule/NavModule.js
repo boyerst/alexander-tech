@@ -82,7 +82,7 @@ const NavModule = () => {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={menuList}
-        transition={{ type: "ease", stiffness: 50, velocity: 50 }}
+        transition={{ type: "ease", stiffness: 50, velocity: 50, delay: 0.5 }}
         className="menu"
       >
         <NavTopLevel>
@@ -112,6 +112,7 @@ const NavModule = () => {
                 initial="closed"
                 animate={subNavOneIsOpen ? "open" : "closed"}
                 variants={subMenuNavVariants}
+                // transition={{ delay: .4 }}
               >
                 {menuItemsAbout.map((item, index) => {   
                   return (
