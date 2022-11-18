@@ -25,19 +25,19 @@ const NavModule = () => {
   const featuredLessons = useFeaturedLesson()
 
   const [isOpen, setNav] = useContext(MenuContext)
-  const [subNavIsOpen, setSubNav] = useState(false)
   const [subNavOneIsOpen, setSubNavOne] = useState(false)
+  const [subNavTwoIsOpen, setSubNavTwo] = useState(false)
 
   const toggleNav = () => {
     setNav((isOpen) => !isOpen)
   }
 
-  const toggleSubNav = () => {
-    setSubNav((subNavIsOpen) => !subNavIsOpen)
-  }
-
   const toggleSubNavOne = () => {
     setSubNavOne((subNavOneIsOpen) => !subNavOneIsOpen)
+  }
+
+  const toggleSubNavTwo = () => {
+    setSubNavTwo((subNavTwoIsOpen) => !subNavTwoIsOpen)
   }
 
   const { title } = UseSiteMetadata()
@@ -129,19 +129,20 @@ const NavModule = () => {
                 })}
               </SubNavStyles>
             </li>
+
           {featuredLessons && (
-            <li className={subNavIsOpen ? "open" : "closed"}>
+            <li className={subNavTwoIsOpen ? "open" : "closed"}>
               <button
                 type="button"
-                onClick={toggleSubNav}
-                onKeyDown={toggleSubNav}
+                onClick={toggleSubNavTwo}
+                onKeyDown={toggleSubNavTwo}
               >
                 Lessons<span>.</span>
                 <Chevron />
               </button>
               <SubNavStyles
                 initial="closed"
-                animate={subNavIsOpen ? "open" : "closed"}
+                animate={subNavTwoIsOpen ? "open" : "closed"}
                 variants={subMenuNavVariants}
               >
                 {featuredLessons.map((item, index) => {

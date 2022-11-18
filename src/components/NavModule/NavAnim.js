@@ -36,14 +36,21 @@ export const menuList = {
   },
 }
 
+// export const subMenuNavVariants = {
+//   open: {
+//     opacity: 1,
+//     height: "auto",
+//   },
+//   closed: {
+//     opacity: 0,
+//     height: 0,
+//   },
+// }
+
 export const subMenuNavVariants = {
-  open: {
-    opacity: 1,
-    height: "auto",
-  },
-  closed: {
-    opacity: 0,
-    height: 0,
-  },
+  open: () => ({ display: open }),
+  closed: () => ({ display: closed })
 }
 
+const open = "block";
+const closed = "none";
