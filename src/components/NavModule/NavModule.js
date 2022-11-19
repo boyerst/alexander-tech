@@ -86,19 +86,17 @@ const NavModule = () => {
         className="menu"
       >
         <NavTopLevel>
-          {menuItems.map((item, index) => (
-            <li key={index}>
+            <li >
               <Link
                 onClick={toggleNav}
                 onKeyDown={toggleNav}
-                to={item.path}
+                to={"/"}
                 activeClassName="menu__item--active"
               >
-                {item.text}
+                Home
                 <span>.</span>
               </Link>
             </li>
-          ))}
             <li className={subNavOneIsOpen ? "open" : "closed"}>
               <button
                 type="button"
@@ -172,6 +170,19 @@ const NavModule = () => {
                 </li>
 
               </SubNavStyles>
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <Link
+                onClick={toggleNav}
+                onKeyDown={toggleNav}
+                to={item.path}
+                activeClassName="menu__item--active"
+              >
+                {item.text}
+                <span>.</span>
+              </Link>
+            </li>
+          ))}
             </li>
           )}
         </NavTopLevel>

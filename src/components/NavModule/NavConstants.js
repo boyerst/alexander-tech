@@ -1,12 +1,8 @@
 export const menuItems = [
-  {
-    path: "/",
-    text: "home",
-  },
-  {
-    path: "/about-alexander-technique",
-    text: "about",
-  },
+  // {
+  //   path: "/",
+  //   text: "home",
+  // },
   {
     path: "/news",
     text: "news",
