@@ -112,7 +112,6 @@ const NavModule = () => {
                 initial="closed"
                 animate={subNavOneIsOpen ? "open" : "closed"}
                 variants={subMenuNavVariants}
-                // transition={{ delay: .4 }}
               >
                 {menuItemsAbout.map((item, index) => {   
                   return (
