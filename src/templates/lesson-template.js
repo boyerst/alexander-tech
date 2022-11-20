@@ -3,7 +3,7 @@ import Seo from "../components/SEO"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import BannerModule from "../components/BannerModule/BannerModule"
-// import Faq from "../components/Faq/Faq"
+import Faq from "../components/Faq/Faq"
 import Lessons from "../components/Lessons/Lessons"
 import RichText from "../components/RichText"
 
@@ -73,6 +73,7 @@ const Lessontemplate = (contentfulLesson) => {
     introduction,
     headerImage,
     description,
+    faqs
   } = contentfulLesson
   const lessonHeaderImage = getImage(headerImage)
   return (
@@ -96,7 +97,7 @@ const Lessontemplate = (contentfulLesson) => {
               <RichText richText={description} />
             </div>
           )}
-{/*          {faqs && (
+          {faqs && (
             <div className="column">
               {faqs.map((item, index) => {
                 return (
@@ -108,7 +109,7 @@ const Lessontemplate = (contentfulLesson) => {
                 )
               })}
             </div>
-          )}*/}
+          )}
         </div>
       </LessonTemplateStyles>
     {/*  {gallery && (

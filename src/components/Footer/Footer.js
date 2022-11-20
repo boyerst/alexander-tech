@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { menuItems } from "../../constants/links"
 import { FooterStyles, FooterMenuStyles, CopyrightStyles } from "./FooterStyles"
-import useAllService from "../../hooks/use-all-service"
+import useAllLesson from "../../hooks/use-all-lesson"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 import {
   FaFacebookSquare as Facebook,
@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa"
 
 const Footer = () => {
-  const allService = useAllService()
+  const allLesson = useAllLesson()
   const siteMeta = UseSiteMetadata()
   return (
     <FooterStyles style={{ marginBottom: 0 }} className="section">
@@ -32,7 +32,7 @@ const Footer = () => {
             })}
           </ul>
         </FooterMenuStyles>
-        {allService.length > 0 && (
+        {allLesson.length > 0 && (
           <FooterMenuStyles className="footer__menu products__menu">
             <h5>
               <Link to="/Lessons">
@@ -40,7 +40,7 @@ const Footer = () => {
               </Link>
             </h5>
             <ul>
-              {allService.map((item, index) => {
+              {allLesson.map((item, index) => {
                 const { gatsbyPath, title } = item
 
                 return (

@@ -21,6 +21,12 @@ export const data = graphql`
       description {
         raw
       }
+      faqs {
+        question
+        answer {
+          raw
+        }
+      }
       title
       introduction
       headerImage {
