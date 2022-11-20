@@ -14,6 +14,7 @@ import {
 const Footer = () => {
   const allLesson = useAllLesson()
   const siteMeta = UseSiteMetadata()
+  console.log(siteMeta)
   return (
     <FooterStyles style={{ marginBottom: 0 }} className="section">
       <div className="container container__tight">
@@ -35,7 +36,7 @@ const Footer = () => {
         {allLesson.length > 0 && (
           <FooterMenuStyles className="footer__menu products__menu">
             <h5>
-              <Link to="/Lessons">
+              <Link to="/lessons">
                 All Lessons<span>.</span>
               </Link>
             </h5>
@@ -115,17 +116,18 @@ const Footer = () => {
           ""
         )}
       </div>
+
       <CopyrightStyles>
         <div className="container container__tight">
           <p>
-            Designed & developed by{" "}
             <a
-              href={siteMeta.developerUrl}
+              href={siteMeta.siteUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {siteMeta.developerName}
+              &copy; {siteMeta.developerName}{" "}
             </a>
+            2022, Portland, OR
             <span>.</span>
           </p>
         </div>

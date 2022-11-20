@@ -20,7 +20,7 @@ export const menuItemsAbout = [
     text: "Alexander Technique",
   },           
   {
-    path: "about-northwest-technique",
+    path: "/about-northwest-technique",
     text: "Northwest Technique"
   }                  
 
