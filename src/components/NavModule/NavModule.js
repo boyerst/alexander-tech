@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react"
 import { Link } from "gatsby"
-import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
+import { FiChevronDown as Chevron } from "react-icons/fi"
+import MenuContext from "../MenuContext"
 import { menuItems, menuItemsAbout } from "./NavConstants"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 import useFeaturedLesson from "../../hooks/use-featured-lesson"
-import { FiChevronDown as Chevron } from "react-icons/fi"
 import {
   NavModuleStyles,
   NavTopLevel,
@@ -57,15 +57,15 @@ const NavModule = () => {
             <motion.span
               className="bar"
               variants={barOneVariants}
-            ></motion.span>
+            />
             <motion.span
               className="bar"
               variants={barTwoVariants}
-            ></motion.span>
+            />
             <motion.span
               className="bar"
               variants={barThreeVariants}
-            ></motion.span>
+            />
           </HamburgerStyles>
 
           {title && (
@@ -82,51 +82,56 @@ const NavModule = () => {
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={menuList}
-        transition={{ type: "ease", stiffness: 50, velocity: 50, delay: 0.5 }}
+        transition={{
+          type: "ease",
+          stiffness: 50,
+          velocity: 50,
+          delay: 0.5
+        }}
         className="menu"
       >
         <NavTopLevel>
-            <li >
-              <Link
-                onClick={toggleNav}
-                onKeyDown={toggleNav}
-                to={"/"}
-                activeClassName="menu__item--active"
-              >
-                Home
-                <span>.</span>
-              </Link>
-            </li>
-            <li className={subNavOneIsOpen ? "open" : "closed"}>
-              <button
-                type="button"
-                onClick={toggleSubNavOne}
-                onKeyDown={toggleSubNavOne}
-              >
-                About<span>.</span>
-                <Chevron />
-              </button>
-              <SubNavStyles
-                initial="closed"
-                animate={subNavOneIsOpen ? "open" : "closed"}
-                variants={subMenuNavVariants}
-              >
-                {menuItemsAbout.map((item, index) => {   
-                  return (
-                    <li key={index}>
-                      <Link
-                        onClick={toggleNav}
-                        onKeyDown={toggleNav}
-                        to={item.path}
-                      >
-                        {item.text}
-                        <span>.</span>
-                      </Link>
-                    </li>
-                  )
-                })}
-              </SubNavStyles>
-            </li>
+          <li>
+            <Link
+              onClick={toggleNav}
+              onKeyDown={toggleNav}
+              to="/"
+              activeClassName="menu__item--active"
+            >
+              Home
+              <span>.</span>
+            </Link>
+          </li>
+          <li className={subNavOneIsOpen ? "open" : "closed"}>
+            <button
+              type="button"
+              onClick={toggleSubNavOne}
+              onKeyDown={toggleSubNavOne}
+            >
+              About<span>.</span>
+              <Chevron />
+            </button>
+            <SubNavStyles
+              initial="closed"
+              animate={subNavOneIsOpen ? "open" : "closed"}
+              variants={subMenuNavVariants}
+            >
+              {menuItemsAbout.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <Link
+                      onClick={toggleNav}
+                      onKeyDown={toggleNav}
+                      to={item.path}
+                    >
+                      {item.text}
+                      <span>.</span>
+                    </Link>
+                  </li>
+                )
+              })}
+            </SubNavStyles>
+          </li>
 
           {featuredLessons && (
             <li className={subNavTwoIsOpen ? "open" : "closed"}>
@@ -168,21 +173,20 @@ const NavModule = () => {
                     See All<span>.</span>
                   </Link>
                 </li>
-
               </SubNavStyles>
-          {menuItems.map((item, index) => (
-            <li key={index}>
-              <Link
-                onClick={toggleNav}
-                onKeyDown={toggleNav}
-                to={item.path}
-                activeClassName="menu__item--active"
-              >
-                {item.text}
-                <span>.</span>
-              </Link>
-            </li>
-          ))}
+              {menuItems.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    onClick={toggleNav}
+                    onKeyDown={toggleNav}
+                    to={item.path}
+                    activeClassName="menu__item--active"
+                  >
+                    {item.text}
+                    <span>.</span>
+                  </Link>
+                </li>
+              ))}
             </li>
           )}
         </NavTopLevel>
