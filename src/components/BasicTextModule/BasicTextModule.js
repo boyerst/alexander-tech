@@ -1,7 +1,7 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import Button from "../Button/Button"
 import { BasicTextModuleStyles } from "./BasicTextModuleStyles"
-import { Link } from "gatsby"
 
 const BasicTextModule = ({ title, content, link, linkText }) => {
   return (

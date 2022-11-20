@@ -30,6 +30,7 @@ module.exports = {
     "no-nested-ternary": "off",
     "no-shadow": "off",
     "arrow-body-style": "off",
+    "object-curly-newline": [1, { "ObjectPattern": { "multiline": true } }],
     // "eslint-plugin-jsx-a11y"
     // ...a11yOff,
     // "eslint-plugin-react"

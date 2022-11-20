@@ -1,8 +1,8 @@
 import * as React from "react"
+import { BsFillTelephoneFill as Phone } from "react-icons/Bs"
 import Button from "../Button/Button"
 import { ContactStyles } from "./ContactStyles"
 import MapModule from "../MapModule/MapModule"
-import { BsFillTelephoneFill as Phone } from "react-icons/Bs"
 
 
 
@@ -13,14 +13,12 @@ const Contact = () => {
       <ContactStyles className="section">
         <div className="call">
           <h2>Call.</h2>
-          
           <span>
             <Phone />
             (123) 456-6957
           </span>
           <p>Monday - Friday </p>
           <p>8:00 am - 5:00 pm PST</p>
-        
         </div>
         <form name="contact" netlify>
           <h2>Write.</h2>
@@ -30,12 +28,12 @@ const Contact = () => {
             placeholder="Your message..."
             name="message"
             rows="5"
-          ></textarea>
+          />
           <Button text="Send Message" />
         </form>
       </ContactStyles>
       <span>
-        {typeof window !== 'undefined' &&
+        {typeof window !== "undefined" &&
           <MapModule />
         }
       </span>
