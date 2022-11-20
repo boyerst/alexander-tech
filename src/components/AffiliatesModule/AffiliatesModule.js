@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { AffiliatesModuleStyles } from "./AffiliatesModuleStyles"
 import { MdOutlineClose as Cross } from "react-icons/md"
+import { AffiliatesModuleStyles } from "./AffiliatesModuleStyles"
 import Affiliate from "./Affiliate"
 
 const AffiliatesModule = () => {
@@ -15,9 +15,14 @@ const AffiliatesModule = () => {
         layout="constrained"
         placeholder="tracedSVG"
       />
-      <div className="affiliates__image--overlay"></div>
+      <div className="affiliates__image--overlay" />
       <div className="container container__tight">
-        <Link className="affiliates_link" to={"https://www.amsatonline.org/aws/AMSAT/pt/sp/home_page"}>
+        <Link
+          className="affiliates_link"
+          to="https://www.amsatonline.org/aws/AMSAT/pt/sp/home_page"
+          target="_blank"
+          rel="nofollow noreferrer noopener"
+        >
           <Affiliate
             title="The Highest Standards"
             content="The American Society for the Alexander Technique (AmSAT) is the largest professional association of certified Alexander Technique teachers in the United States."
@@ -37,7 +42,12 @@ const AffiliatesModule = () => {
         <span className="affiliates__divider">
           <Cross />
         </span>
-        <Link className="affiliates_link">
+        <Link
+          className="affiliates_link"
+          to="https://www.linkgoeshere.com"
+          target="_blank"
+          rel="nofollow noreferrer noopener"
+        >
           <Affiliate
             title="<your non-profit logo here>"
             content="<your non-profit description here>"

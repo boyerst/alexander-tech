@@ -38,5 +38,6 @@ module.exports = {
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+    "react/jsx-no-bind": [0, { "allowBind": true }]
   },
 };

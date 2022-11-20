@@ -1,14 +1,13 @@
 import * as React from "react"
 import { Link, navigate } from "gatsby"
-import { BannerModuleStyles } from "./BannerModuleStyles"
 import { StaticImage } from "gatsby-plugin-image"
+import { BannerModuleStyles } from "./BannerModuleStyles"
 import Button from "../Button/Button"
 
 const BannerModule = ({ children, title, subTitle, price, enquire }) => {
 
   function scrollToArea() {
     navigate("#topContent")
-    console.log("Button Clicked")
   }
 
 
@@ -58,9 +57,9 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
             </div>
           </div>
         </div>
-        <div className="gradient"></div>
+        <div className="gradient" />
       </BannerModuleStyles>
-      <span id="topContent"></span>
+      <span id="topContent" />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
-import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
+import MenuContext from "../MenuContext"
 
 const AnimMain = ({ children }) => {
   const [isOpen] = useContext(MenuContext)

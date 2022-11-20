@@ -1,20 +1,20 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { menuItems } from "../../constants/links"
-import { FooterStyles, FooterMenuStyles, CopyrightStyles } from "./FooterStyles"
-import useAllLesson from "../../hooks/use-all-lesson"
-import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
 import {
   FaFacebookSquare as Facebook,
   FaTwitterSquare as Twitter,
   FaInstagram as Instagram,
   FaLinkedin as Linkedin,
 } from "react-icons/fa"
+import useAllLesson from "../../hooks/use-all-lesson"
+import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
+import { FooterStyles, FooterMenuStyles, CopyrightStyles } from "./FooterStyles"
+import { menuItems } from "../../constants/links"
 
 const Footer = () => {
   const allLesson = useAllLesson()
   const siteMeta = UseSiteMetadata()
-  console.log(siteMeta)
+
   return (
     <FooterStyles style={{ marginBottom: 0 }} className="section">
       <div className="container container__tight">
@@ -116,7 +116,6 @@ const Footer = () => {
           ""
         )}
       </div>
-
       <CopyrightStyles>
         <div className="container container__tight">
           <p>
