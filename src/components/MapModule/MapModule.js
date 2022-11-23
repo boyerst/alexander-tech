@@ -1,14 +1,15 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
-import 'leaflet/dist/leaflet.css'
-import marker from '../../../static/map-marker.png';
-import { Icon } from 'leaflet'
-const myIcon = new Icon({
- iconUrl: marker,
- iconSize: [60,60]
-})
+import "leaflet/dist/leaflet.css"
+import { Icon } from "leaflet"
+import marker from "../../../static/map-marker.png"
 
+
+
+const myIcon = new Icon({
+  iconUrl: marker,
+  iconSize: [60, 60]
+})
 
 const MapModule = (props) => {
 
@@ -17,7 +18,7 @@ const MapModule = (props) => {
 
   return (
 
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ width: '100%', height: '600px' }}>
+    <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ width: "100%", height: "600px" }}>
 
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -25,7 +26,7 @@ const MapModule = (props) => {
       />
       <Marker position={position} icon={myIcon}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          /studio name/ <br /> /address/ Portland, OR
         </Popup>
       </Marker>
     </MapContainer>
