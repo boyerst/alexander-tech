@@ -20,7 +20,7 @@ const Index = () => {
         <BasicTextModule
           title="<We or name of practice> offer a variety of lesssons necessitatibus fugit id dolores."
           content="Lorem ipsum dolor sit amet. Aut nobis quasi est necessitatibus fugit id dolores itaque quo reiciendis unde hic esse laborum ea quis perferendis ea tempore error."
-          link="/Lessons"
+          link="/lessons"
           linkText="View Lessons"
         />
         <AffiliatesModule>

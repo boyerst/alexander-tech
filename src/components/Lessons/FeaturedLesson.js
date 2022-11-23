@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Button from "../Button/Button"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Button from "../Button/Button"
 import { FeaturedLessonStyles } from "./LessonsStyles"
 
 const FeaturedLesson = ({ feature }) => {
