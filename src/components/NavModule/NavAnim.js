@@ -49,28 +49,28 @@ export const menuList = {
 
 
 export const subMenuNavVariants = {
-  open: () => ({ 
+  open: () => ({
     visibility: "visible",
-    height: "auto", 
-    opacity: 1, 
+    height: "auto",
+    opacity: 1,
     transition: {
       height: {
-        duration: .5,
+        duration: 0.5
       },
       opacity: {
         duration: 1,
-        delay: .2
+        delay: 0.2
       }
     }
   }),
-  closed: () => ({ 
-    visibility: "hidden", 
-    height: 0, 
-    opacity: 0,  
+  closed: () => ({
+    visibility: "hidden",
+    height: 0,
+    opacity: 0,
     transition: {
       // delay: 2,
       height: {
-        duration: .8,
+        duration: 0.8
       }
     }
   })

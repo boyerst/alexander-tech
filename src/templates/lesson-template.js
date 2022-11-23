@@ -1,7 +1,7 @@
 import React from "react"
-import Seo from "../components/SEO"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import Seo from "../components/SEO"
 import BannerModule from "../components/BannerModule/BannerModule"
 import Faq from "../components/Faq/Faq"
 import Lessons from "../components/Lessons/Lessons"

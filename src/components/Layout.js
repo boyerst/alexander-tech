@@ -1,8 +1,8 @@
 import * as React from "react"
+import { motion } from "framer-motion"
 import NavModule from "./NavModule/NavModule"
 import AnimMain from "./AnimMain/AnimMain"
 import Footer from "./Footer/Footer"
-import { motion } from "framer-motion"
 import { GlobalStyle } from "../styles/GlobalStyles"
 
 const Layout = ({ children }) => {

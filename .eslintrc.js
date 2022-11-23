@@ -40,6 +40,7 @@ module.exports = {
     "react/jsx-props-no-spreading": 0,
     "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     "react/jsx-no-bind": [0, { "allowBind": true }],
-    "react/no-array-index-key": "off"
+    "react/no-array-index-key": "off",
+    "react/jsx-boolean-value": "off"
   },
 };

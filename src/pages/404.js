@@ -1,6 +1,6 @@
 import * as React from "react"
-import Layout from "../components/Layout"
 import { Link } from "gatsby"
+import Layout from "../components/Layout"
 import Seo from "../components/SEO"
 import Button from "../components/Button/Button"
 
