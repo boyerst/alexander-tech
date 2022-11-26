@@ -14,7 +14,7 @@ const contact = () => {
           <StaticImage
             className="banner__image"
             src="../../static/hawk.jpeg"
-            alt="Apple Macbook Dark"
+            alt="hawk"
           />
         </SimpleBanner>
         <Contact />
