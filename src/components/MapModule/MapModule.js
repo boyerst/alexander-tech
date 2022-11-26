@@ -6,10 +6,13 @@ import marker from "../../../static/map-marker.png"
 
 
 
-const myIcon = new Icon({
-  iconUrl: marker,
-  iconSize: [60, 60]
-})
+if (typeof window !== 'undefined') {
+  const myIcon = new Icon({
+    iconUrl: marker,
+    iconSize: [60, 60]
+  })
+}
+
 
 const MapModule = (props) => {
 
