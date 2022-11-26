@@ -1,5 +1,5 @@
 import * as React from "react"
-import { BsFillTelephoneFill as Phone } from "react-icons/Bs"
+import { BsTelephoneForwardFill } from "react-icons/bs"
 import Button from "../Button/Button"
 import { ContactStyles } from "./ContactStyles"
 import MapModule from "../MapModule/MapModule"
@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="call">
           <h2>Call.</h2>
           <span>
-            <Phone />
+            <BsTelephoneForwardFill />
             (123) 456-6957
           </span>
           <p>Monday - Friday </p>
