@@ -14,6 +14,12 @@ if (typeof window !== 'undefined') {
 }
 
 
+const myIcon = new Icon({
+  iconUrl: marker,
+  iconSize: [60, 60]
+})
+
+
 const MapModule = (props) => {
 
   const position = [45.51667, -122.66667]
