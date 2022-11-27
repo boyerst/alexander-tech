@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 export const BannerModuleStyles = styled.section`
   height: 100vh;
@@ -71,6 +72,10 @@ export const BannerModuleStyles = styled.section`
 
 
 
+
+export const TitleStyles = styled(motion.div)`
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+`
 
 
 

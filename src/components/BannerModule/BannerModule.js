@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Link, navigate } from "gatsby"
+import { useScroll, useTransform } from "framer-motion"
 import { StaticImage } from "gatsby-plugin-image"
-import { BannerModuleStyles } from "./BannerModuleStyles"
+import { BannerModuleStyles, TitleStyles } from "./BannerModuleStyles"
 import Button from "../Button/Button"
 
 const BannerModule = ({ children, title, subTitle, price, enquire }) => {
@@ -10,6 +11,8 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
     navigate("#topContent")
   }
 
+  const { scrollYProgress } = useScroll()
+  const x = useTransform(scrollYProgress, [0, 1], [0, 900])
 
 
   return (
@@ -29,7 +32,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
           />
         )}
         <div className="container">
-          <div className="banner__content">
+          <TitleStyles style={{x}} className="banner__content">
             {title && (
               <h1>
                 {title}
@@ -55,7 +58,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
               )}
               <Button onClick={scrollToArea} text="Learn More" />
             </div>
-          </div>
+          </TitleStyles>
         </div>
         <div className="gradient" />
       </BannerModuleStyles>
