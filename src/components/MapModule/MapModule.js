@@ -14,6 +14,7 @@ if (typeof window !== 'undefined') {
 }
 
 
+// Required for dev deployment ...
 // const myIcon = new Icon({
 //   iconUrl: marker,
 //   iconSize: [60, 60]

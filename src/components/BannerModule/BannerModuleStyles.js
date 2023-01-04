@@ -2,7 +2,8 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 
 export const BannerModuleStyles = styled.section`
-  height: 100vh;
+  // height: 100vh;
+  height: 60vh;
   position: relative;
   padding: 30px var(--borderSpacing);
 

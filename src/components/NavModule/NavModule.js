@@ -173,6 +173,15 @@ const NavModule = () => {
                     See All<span>.</span>
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    onClick={toggleNav}
+                    onKeyDown={toggleNav}
+                    to="/about-lessons"
+                  >
+                    About Lessons<span>.</span>
+                  </Link>
+                </li>
               </SubNavStyles>
               {menuItems.map((item, index) => (
                 <li key={index}>

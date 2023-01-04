@@ -21,7 +21,7 @@ const AnimMain = ({ children }) => {
       variants={siteBody}
       transition={{ type: "ease", stiffness: 50, velocity: 50 }}
       style={{
-        transition: "filter 0.3s ease",
+        transition: "filter 1.5s ease",
         filter: isOpen ? "blur(25px)" : "none",
       }}
     >
